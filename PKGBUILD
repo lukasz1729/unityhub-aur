@@ -47,7 +47,7 @@ install='unityhub.install'
 package() {
   tar -xf 'data.tar.zst' -C "$pkgdir/"
   mkdir -p "$pkgdir/usr/bin"
-  ln -sf '/opt/unityhub/unityhub' "$pkgdir/usr/bin/unityhub"
+  ln -sf '/usr/lib/unityhub/unityhub' "$pkgdir/usr/bin/unityhub"
 
   install -Dm644 "$srcdir/license.txt" "$pkgdir/usr/share/licenses/$pkgname/license.txt"
   install -Dm644 "$srcdir/services-config.json" "$pkgdir/usr/share/unity3d/config/services-config.json"
